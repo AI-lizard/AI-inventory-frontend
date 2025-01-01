@@ -1,0 +1,133 @@
+/* @import "tailwindcss/base";
+ * @import "tailwindcss/components";
+ * @import "tailwindcss/utilities";
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom styles for dashboard cards */
+.dashboard-card {
+  @apply rounded-lg border bg-white p-6 shadow-sm;
+}
+
+.stat-card {
+  @apply space-y-3;
+}
+
+.stat-value {
+  @apply text-3xl font-bold tracking-tight text-gray-900;
+}
+
+.stat-description {
+  @apply text-sm text-gray-500;
+}
+
+/* Navigation styles */
+.nav-item {
+  @apply flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:bg-gray-100 hover:text-gray-900;
+}
+
+.nav-item.active {
+  @apply bg-gray-100 text-gray-900;
+}
+
+/* Chart styles */
+.chart-container {
+  @apply h-[200px] w-full;
+}
+
+/* Calendar styles */
+.calendar-container {
+  @apply p-4;
+}
+
+.calendar-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.calendar-grid {
+  @apply grid grid-cols-7 gap-1;
+}
+
+.calendar-day {
+  @apply aspect-square flex items-center justify-center rounded-md text-sm transition-colors hover:bg-accent hover:text-accent-foreground;
+}
+
+/* Chat styles */
+.chat-container {
+  @apply space-y-4 p-4;
+}
+
+.chat-message {
+  @apply flex gap-3 text-sm;
+}
+
+.chat-message.incoming {
+  @apply justify-start;
+}
+
+.chat-message.outgoing {
+  @apply justify-end;
+}
+
+.message-content {
+  @apply rounded-xl px-4 py-2;
+}
+

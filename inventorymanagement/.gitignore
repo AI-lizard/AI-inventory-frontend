@@ -1,0 +1,9 @@
+node_modules/
+.next/
+dist/
+build/
+*.log
+*.pyc
+*.pyo
+__pycache__/
+.env
